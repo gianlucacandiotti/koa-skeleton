@@ -12,7 +12,7 @@ export default class ExamplePure extends Component {
 
     return (
       <ul>
-      	{data.map(item => <li>item</li>)}
+      	{data.map((item, i) => <li key={i}>item</li>)}
       </ul>
     );
   }
