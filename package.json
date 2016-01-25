@@ -1,0 +1,74 @@
+{
+  "name": "SitApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ],
+          "plugins": [
+            "transform-class-properties"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "forever start src/server.js",
+    "stop": "forever stopall",
+    "start-server": "nodemon src/server.js",
+    "start-dev": "parallelshell 'npm run watch' 'npm run sync'",
+    "preclean": "if [ ! -d build ]; then mkdir build build/css build/js build/vendor; fi",
+    "clean": "rm -rf build/css build/js && mkdir build/css build/js",
+    "sync": "browser-sync start --files 'build/**/*.css, build/**/*.js'",
+    "build-vendor-js": "./bin/build-vendor-js",
+    "build-js": "./bin/build-js",
+    "watch-js": "./bin/watch-js",
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css",
+    "build": "npm run clean && npm run build-vendor-js && npm run build-js && npm run build-css",
+    "watch": "parallelshell 'npm run watch-js' 'npm run watch-css'"
+  },
+  "keywords": [],
+  "author": "Gianluca Candiotti",
+  "engines": {
+    "node": "5.3.0"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.4.0",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "forever": "^0.15.1",
+    "jquery": "^2.2.0",
+    "koa": "^1.1.2",
+    "koa-body": "^1.4.0",
+    "koa-compress": "^1.0.8",
+    "koa-helmet": "^1.0.0",
+    "koa-nunjucks-render": "^1.1.1",
+    "koa-router": "^5.3.0",
+    "koa-static": "^2.0.0",
+    "lodash": "^4.0.0",
+    "node-sass": "^3.4.2",
+    "parallelshell": "^2.0.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "uglify-js": "^2.6.1",
+    "uglifyify": "^3.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "nodemon": "^1.8.1",
+    "watchify": "^3.7.0"
+  }
+}

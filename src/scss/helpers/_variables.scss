@@ -1,0 +1,18 @@
+// Media query breakpoints
+
+$small-bp: 30em !default; // approx 480px
+$medium-bp: 40.063em !default; // approx 641px
+$large-bp: 64.063em !default; // approx 1025px
+$xlarge-bp: 90.063em !default; // approx 1441px;
+
+// Colors
+
+$black:      #333333 !default;
+$grey:       #4c5151 !default;
+$white:      #FFFFFF !default;
+
+// Font stack
+$body-font: "Roboto", Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif !default;
+
+// The base body size
+$body-font-size: 14px !default;

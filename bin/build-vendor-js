@@ -1,0 +1,10 @@
+#!/bin/bash
+browserify \
+-r react \
+-r react-dom \
+-r jquery \
+-g uglifyify \
+| uglifyjs \
+--compress warnings=false \
+--mangle \
+-o build/vendor/app-vendor.js

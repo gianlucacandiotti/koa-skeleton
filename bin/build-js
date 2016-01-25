@@ -1,0 +1,11 @@
+#!/bin/bash
+browserify \
+-x react \
+-x react-dom \
+-x jquery \
+-g uglifyify \
+src/js/app.js \
+| uglifyjs \
+--compress warnings=false \
+--mangle \
+-o build/js/app.js
