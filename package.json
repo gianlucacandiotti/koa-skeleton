@@ -1,8 +1,4 @@
 {
-  "name": "Koa-Skeleton",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "browserify": {
     "transform": [
       [
@@ -35,12 +31,10 @@
     "build": "npm run clean && npm run build-vendor-js && npm run build-js && npm run build-css",
     "watch": "parallelshell 'npm run watch-js' 'npm run watch-css'"
   },
-  "keywords": [],
-  "author": "Gianluca Candiotti",
   "engines": {
     "node": "5.3.0"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.4.0",
     "babel-polyfill": "^6.3.14",
