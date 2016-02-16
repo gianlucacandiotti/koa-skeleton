@@ -22,7 +22,7 @@
     "start-dev": "parallelshell 'npm run watch' 'npm run sync'",
     "preclean": "if [ ! -d build ]; then mkdir build build/css build/js build/vendor; fi",
     "clean": "rm -rf build/css build/js && mkdir build/css build/js",
-    "sync": "browser-sync start --files 'build/**/*.css, build/**/*.js'",
+    "sync": "browser-sync start --reload-delay 500 --files 'build/**/*.css, build/**/*.js'",
     "build-vendor-js": "./bin/build-vendor-js",
     "build-js": "./bin/build-js",
     "watch-js": "./bin/watch-js",
