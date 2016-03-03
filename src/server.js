@@ -17,7 +17,7 @@ const koa = require('koa'),
 			koaBody = require('koa-body')(),
 			nunjucksRender = require('koa-nunjucks-render');
 
-const config = require('./config');
+const config = require('./config/config');
 
 ///////////////////////////////////
 

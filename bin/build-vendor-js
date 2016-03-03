@@ -2,7 +2,7 @@
 browserify \
 -r react \
 -r react-dom \
--r jquery \
+-r ramda \
 -g uglifyify \
 | uglifyjs \
 --compress warnings=false \
