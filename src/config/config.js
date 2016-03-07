@@ -1,7 +1,7 @@
 'use strict';
 
-exports.NODE_ENV = process.env.NODE_ENV || 'development';
-exports.PORT = process.env.PORT || 3000; 
+exports.NODE_ENV = process.env.NODE_ENV;
+exports.PORT = process.env.PORT; 
 
 // Set the HOSTNAME in production for basic CSRF prevention
 exports.HOSTNAME = process.env.HOSTNAME;

@@ -2,7 +2,6 @@
 browserify \
 -x react \
 -x react-dom \
--x ramda \
 -g uglifyify \
 src/js/app.js \
 | uglifyjs \

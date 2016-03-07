@@ -2,7 +2,6 @@
 watchify \
 -x react \
 -x react-dom \
--x ramda \
 src/js/app.js \
 -o build/js/app.js \
 --poll \

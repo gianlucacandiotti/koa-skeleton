@@ -11,6 +11,8 @@ require("babel-register")({
 	]
 });
 
+require('dotenv').config();
+
 const koa = require('koa'),
 			router  = require('./routes'),
 			serve = require('koa-static'),

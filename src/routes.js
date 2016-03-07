@@ -1,15 +1,10 @@
 import router  from 'koa-router';
-import React from 'react';
-import ReactDOM  from 'react-dom/server';
-import ExampleContainer from './js/components/containers/ExampleContainer/ExampleContainer';
+import AppRouter from './routers/AppRouter';
+import ProductsRouter from './routers/ProductsRouter';
 
 const Router = router();
 
-Router.get('/', function *(next) {
-	yield this.render('home', {
-		title: 'Your page title',
-		react: ReactDOM.renderToString(<ExampleContainer />)
-	});
-});
+Router.use(AppRouter.routes());
+Router.use(ProductsRouter.routes());
 
 module.exports = Router;
